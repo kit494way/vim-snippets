@@ -154,4 +154,122 @@ snippet us
 'use strict'`!p snip.rv = semi(snip)`
 endsnippet
 
+snippet let "let v = ;"
+let ${1} = ${0};
+endsnippet
+
+snippet const "const v = ;"
+const ${1} = ${0};
+endsnippet
+
+snippet arrow "() =>" w
+(${1}) => ${0}
+endsnippet
+
+snippet arrowb "() => {}" w
+(${1}) => {
+	${0}
+}
+endsnippet
+
+snippet asynca "async () =>" w
+async (${1}) => ${0}
+endsnippet
+
+snippet asyncab "async () =>" w
+async (${1}) => {
+	${0}
+}
+endsnippet
+
+snippet asyncf "async function"
+async function ${1:function_name}(${2:arguments}) {
+	${0}
+}
+endsnippet
+
+snippet error "console.error"
+console.error(${1})${0}
+endsnippet
+
+snippet log "console.log"
+console.log(${1})${0}
+endsnippet
+
+snippet log= "console.log('= ... =')"
+console.log('==================== ${1} ====================')${0}
+endsnippet
+
+snippet warn "console.warn"
+console.warn(${1})${0}
+endsnippet
+
+snippet "\.map" "map(x => x)" r
+.map(${1:x} => ${1/.+/$0/}${2})${0}
+endsnippet
+
+snippet "\.reduce" "reduce((acc, x) => )" r
+.reduce((${1:acc}, ${2:x}) => ${3})${0}
+endsnippet
+
+snippet else "else {"
+else {
+	${0}
+}
+endsnippet
+
+snippet "else if" "else if (...)"
+else if (${1:true}) {
+	${2}
+}${0}
+endsnippet
+
+snippet "switch" "switch () {...}"
+switch (${1:expression}) {
+	case ${2:case}:
+		${3}
+		break;
+}
+endsnippet
+
+snippet "case" "switch { case case: }"
+case ${1:case}:
+	${2}
+	break;${0}
+endsnippet
+
+snippet "default" "switch { default: }"
+default:
+	${0}
+	break;
+endsnippet
+
+snippet for "for (let i = 0; i < n; i++)"
+for (let ${1:i} = ${2:0}; ${1/.+/$0/} < ${3:n}; ${1/.+/$0/}++) {
+	${4}
+}${0}
+
+endsnippet
+snippet forlen "for (let i = 0, len = ...)"
+for (let ${1:i} = ${2:0}, ${3:len} = ${4:${5:Things}.${6:length}}; ${1/.+/$0/} < ${3/.+/$0/}; ${1/.+/$0/}++) {
+	${7}
+}${0}
+endsnippet
+
+snippet foro "for (const x of xs)"
+for (const ${1:x} of ${2:xs}) {
+	${3}
+}${0}
+endsnippet
+
+snippet throw "throw new Error(...)"
+throw new ${1:Error}('${2:something went wrong}');${0}
+endsnippet
+
+snippet expd "export default {...}"
+export default {
+	${0}
+};
+endsnippet
+
 # vim:ft=snippets:
