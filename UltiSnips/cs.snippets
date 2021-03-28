@@ -333,15 +333,36 @@ public static bool operator !=($1 x, $1 y) => !(x == y);
 
 endsnippet
 
-snippet mth "Method" b
+snippet meth "Method" b
 ${1:public} ${2:void} ${3:MyMethod}(${4})
 {
 	$0
 }
 endsnippet
 
-snippet mths "Static method" b
+snippet meths "Static method" b
 ${1:public} static ${2:void} ${3:MyMethod}(${4})
+{
+	$0
+}
+endsnippet
+
+snippet methv "Virtual method" b
+${1:public} virtual ${2:void} ${3:MyMethod}(${4})
+{
+	$0
+}
+endsnippet
+
+snippet metho "Override method" b
+${1:public} override ${2:void} ${3:MyMethod}(${4})
+{
+	$0
+}
+endsnippet
+
+snippet methn "New method" b
+${1:public} new ${2:void} ${3:MyMethod}(${4})
 {
 	$0
 }
